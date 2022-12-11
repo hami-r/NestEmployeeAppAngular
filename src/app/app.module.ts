@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { AddTasksComponent } from './add-tasks/add-tasks.component';
+import { ViewTasksComponent } from './view-tasks/view-tasks.component';
 
 let myRoutes:Routes = [
   {
@@ -18,8 +19,16 @@ let myRoutes:Routes = [
     component:AdminLoginComponent
   },
   {
-    path:"/addEmp",
+    path:"addEmp",
     component:AddEmployeeComponent
+  },
+  {
+    path:"addTask",
+    component:AddTasksComponent
+  },
+  {
+    path:"viewAllTasks",
+    component:ViewTasksComponent
   }
 ]
 
@@ -30,7 +39,8 @@ let myRoutes:Routes = [
     AdminLoginComponent,
     AdminNavbarComponent,
     AddEmployeeComponent,
-    AddTasksComponent
+    AddTasksComponent,
+    ViewTasksComponent
   ],
   imports: [
     BrowserModule,

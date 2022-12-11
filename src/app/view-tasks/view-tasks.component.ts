@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-view-tasks',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class ViewTasksComponent {
   data:any = []
+  constructor(private api:ApiService) {
+    this.api.viewAllTasks().subscribe(
+      (response:any) => {
+        console.log(response);
+        this.data=response
+      }
+    )
+  }
 }

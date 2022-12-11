@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-view-employee-task',
@@ -6,18 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-employee-task.component.css']
 })
 export class ViewEmployeeTaskComponent {
-  userId:any = ""
+  employeeId:any = ""
   fetchedTasks:any = []
-  // constructor(private api:ApiService){
-  //   this.userId=localStorage.getItem("userInfo")
-  //   let data:any = {
-  //     "id":this.userId
-  //   }
-
-  //   this.api.viewMyComplaints(data).subscribe(
-  //     (response:any) => {
-  //       this.fetchedComplaints = response
-  //     }
-  //   )
-  // }
+  constructor(private api:ApiService){
+    this.employeeId=localStorage.getItem("empId")
+    let data:any = {
+      "employeeId":this.employeeId
+    }
+    console.log(data);
+    
+    this.api.viewEmployeeTask(data).subscribe(
+      (response:any) => {
+        console.log(response);
+        this.fetchedTasks = response
+      }
+    )
+  }
 }

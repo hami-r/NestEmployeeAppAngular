@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-view-profile',
@@ -6,21 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-profile.component.css']
 })
 export class ViewProfileComponent {
-  userId:any = ""
+  employeeId:any = ""
   fetchedData:any = []
 
-  // constructor(private api:ApiService){
-  //   this.userId = localStorage.getItem("userInfo")
-  //   console.log(this.userId);
-  //   let data:any = {
-  //     "id":this.userId
-  //   }
-  //   console.log(data);
+  constructor(private api:ApiService){
+    this.employeeId = localStorage.getItem("empId")
+    console.log(this.employeeId);
+    let data:any = {
+      "id":this.employeeId
+    }
+    console.log(data);
     
-  //   this.api.viewProfile(data).subscribe(
-  //     (response:any) => {
-  //       this.fetchedData=response
-  //     }
-  //   )
-  // }
+    this.api.viewProfile(data).subscribe(
+      (response:any) => {
+        console.log(response);
+        this.fetchedData=response
+      }
+    )
+  }
 }

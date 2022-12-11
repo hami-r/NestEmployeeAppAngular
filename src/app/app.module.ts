@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { AddTasksComponent } from './add-tasks/add-tasks.component';
 
 let myRoutes:Routes = [
   {
@@ -28,7 +29,8 @@ let myRoutes:Routes = [
     HomeNavbarComponent,
     AdminLoginComponent,
     AdminNavbarComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    AddTasksComponent
   ],
   imports: [
     BrowserModule,

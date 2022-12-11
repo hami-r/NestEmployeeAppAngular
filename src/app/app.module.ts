@@ -13,6 +13,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { AddTasksComponent } from './add-tasks/add-tasks.component';
 import { ViewTasksComponent } from './view-tasks/view-tasks.component';
 import { EmployeeLoginComponent } from './employee-login/employee-login.component';
+import { EmployeeNavbarComponent } from './employee-navbar/employee-navbar.component';
 
 let myRoutes:Routes = [
   {
@@ -42,7 +43,8 @@ let myRoutes:Routes = [
     AddEmployeeComponent,
     AddTasksComponent,
     ViewTasksComponent,
-    EmployeeLoginComponent
+    EmployeeLoginComponent,
+    EmployeeNavbarComponent
   ],
   imports: [
     BrowserModule,

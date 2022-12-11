@@ -12,6 +12,7 @@ import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { AddTasksComponent } from './add-tasks/add-tasks.component';
 import { ViewTasksComponent } from './view-tasks/view-tasks.component';
+import { EmployeeLoginComponent } from './employee-login/employee-login.component';
 
 let myRoutes:Routes = [
   {
@@ -40,7 +41,8 @@ let myRoutes:Routes = [
     AdminNavbarComponent,
     AddEmployeeComponent,
     AddTasksComponent,
-    ViewTasksComponent
+    ViewTasksComponent,
+    EmployeeLoginComponent
   ],
   imports: [
     BrowserModule,

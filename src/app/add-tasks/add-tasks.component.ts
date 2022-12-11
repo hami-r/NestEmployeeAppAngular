@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AddTasksComponent {
   task = ""
-  employeeCode = ""
+  employeeId = ""
   status = "Not completed"
   readValues = () => {
     let data:any = {
       "task":this.task,
-      "employeeCode":this.employeeCode,
+      "employeeId":this.employeeId,
       "status":this.status
     }
     console.log(data);
